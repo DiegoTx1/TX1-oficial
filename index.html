@@ -1,31 +1,36 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>TX1 - Login</title>
+    <title>TX1 - Painel</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        function login() {
-            const email = document.getElementById("email").value;
-            const senha = document.getElementById("senha").value;
-            if(email === "admin@tx1.com" && senha === "110394") {
-                window.location.href = "painel.html";
-            } else {
-                alert("Email ou senha incorretos.");
-            }
-        }
-    </script>
 </head>
 <body>
-    <div class="overlay">
-        <img src="avatar.png" class="avatar" alt="TX1 Avatar">
-        <div class="login-box">
-            <h2>TX1 - Acesso</h2>
-            <input type="text" id="email" placeholder="Email" required>
-            <input type="password" id="senha" placeholder="Senha" required>
-            <button onclick="login()">Entrar</button>
-        </div>
+    <div class="top-bar">
+        <span>Usuário: admin@tx1.com</span>
+        <span>Banca: R$1000</span>
+        <span>Meta: R$100</span>
+        <span>Stop: R$50</span>
+        <span class="relogio">16:58:24</span>
+    </div>
+    <div class="menu-lateral">
+        <ul>
+            <li>Gráfico</li>
+            <li>Refúgio TX1</li>
+            <li>Histórico</li>
+            <li>Estatísticas</li>
+        </ul>
+    </div>
+    <div class="mensagem">"Confiança é sua maior entrada. TX1 está com você."</div>
+    <div class="painel">
+        <div class="grafico" id="grafico-real">[ Gráfico Real com indicadores ]</div>
+        <div class="grafico" id="espelho-tx1">[ Espelho TX1 com leitura ]</div>
+    </div>
+    <div class="comando-box direita">
+        <p><strong>SINAL ATUAL: CALL</strong></p>
+        <p>Critérios: RSI abaixo de 30, Engolfo de alta, MACD cruzado para cima</p>
+        <p>Confiabilidade: 93%</p>
     </div>
 </body>
 </html>
