@@ -7,15 +7,14 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <div class="topbar">
+    <div class="topo">
         <span>Usuário: admin@tx1.com</span>
         <span>Banca: R$1000</span>
         <span>Meta: R$100</span>
         <span>Stop: R$50</span>
-        <span class="hora" id="hora-atual"></span>
+        <span class="relogio">17:59:59</span>
     </div>
-    <div class="mensagem-central">"Confiança é sua maior entrada. TX1 está com você."</div>
-    <div class="sidebar">
+    <div class="menu-lateral">
         <ul>
             <li>Gráfico</li>
             <li>Refúgio TX1</li>
@@ -23,20 +22,17 @@
             <li>Estatísticas</li>
         </ul>
     </div>
-    <div class="conteudo-graficos">
-        <div class="grafico" id="grafico-real">[ Gráfico Real com indicadores ]</div>
-        <div class="grafico" id="espelho-tx1">[ Espelho TX1 com leitura ]</div>
+    <div class="mensagem-topo">
+        <em>"Confiança é sua maior entrada. TX1 está com você."</em>
     </div>
-    <div class="comando">
+    <div class="painel-graficos">
+        <div class="grafico" id="grafico1">[ Gráfico Real com indicadores ]</div>
+        <div class="grafico" id="grafico2">[ Espelho TX1 com leitura ]</div>
+    </div>
+    <div class="painel-comando">
         <strong>SINAL ATUAL: CALL</strong><br>
         Critérios: RSI abaixo de 30, Engolfo de alta, MACD cruzado para cima<br>
         Confiabilidade: 93%
     </div>
-    <script>
-        setInterval(() => {
-            const agora = new Date();
-            document.getElementById("hora-atual").innerText = agora.toLocaleTimeString("pt-BR");
-        }, 1000);
-    </script>
 </body>
 </html>

@@ -1,58 +1,79 @@
 
 body {
     margin: 0;
+    font-family: Arial, sans-serif;
     background-color: #000;
     color: #0ff;
-    font-family: Arial, sans-serif;
 }
-.topbar {
+.fundo-login {
+    background: url("avatar.png") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
     display: flex;
-    justify-content: space-around;
-    background-color: #111;
-    padding: 10px;
-    font-size: 14px;
+    justify-content: center;
+    align-items: center;
 }
-.mensagem-central {
+.login-box {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 8px;
     text-align: center;
-    font-style: italic;
+}
+.login-box input {
+    width: 100%;
+    padding: 10px;
     margin: 10px 0;
 }
-.sidebar {
-    position: absolute;
-    top: 60px;
-    left: 10px;
+.login-box button {
+    background-color: #00ffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
 }
-.sidebar ul {
-    list-style: none;
+.topo {
+    display: flex;
+    justify-content: space-around;
+    background-color: #000;
+    padding: 10px;
+    border-bottom: 1px solid #0ff;
+}
+.menu-lateral {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 10px;
+}
+.menu-lateral ul {
+    list-style-type: none;
     padding: 0;
 }
-.sidebar li {
+.menu-lateral li {
     margin: 10px 0;
     color: #0ff;
 }
-.conteudo-graficos {
+.mensagem-topo {
+    text-align: center;
+    margin-top: 10px;
+}
+.painel-graficos {
     display: flex;
     justify-content: center;
-    margin-left: 120px;
-    margin-top: 20px;
-    gap: 30px;
+    margin: 20px;
 }
 .grafico {
-    width: 420px;
+    width: 460px;
     height: 300px;
+    margin: 0 10px;
     border: 1px solid #0ff;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
-.comando {
+.painel-comando {
     position: absolute;
-    right: 20px;
     bottom: 20px;
+    right: 20px;
     border: 1px solid #0ff;
     padding: 10px;
-    width: 300px;
-    background-color: rgba(0, 255, 255, 0.1);
-    font-size: 13px;
+    background-color: rgba(0,0,0,0.7);
 }
