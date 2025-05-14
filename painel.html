@@ -7,34 +7,35 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <div class="top-bar">
+    <div class="topbar">
         <span>Usuário: admin@tx1.com</span>
         <span>Banca: R$1000</span>
         <span>Meta: R$100</span>
         <span>Stop: R$50</span>
-        <span class="relogio" id="clock"></span>
+        <span class="hora" id="hora-atual"></span>
     </div>
-    <div class="mensagem-topo">"Confiança é sua maior entrada. TX1 está com você."</div>
-    <div class="menu-lateral">
-        <p>Gráfico</p>
-        <p>Refúgio TX1</p>
-        <p>Histórico</p>
-        <p>Estatísticas</p>
+    <div class="mensagem-central">"Confiança é sua maior entrada. TX1 está com você."</div>
+    <div class="sidebar">
+        <ul>
+            <li>Gráfico</li>
+            <li>Refúgio TX1</li>
+            <li>Histórico</li>
+            <li>Estatísticas</li>
+        </ul>
     </div>
-    <div class="graficos">
-        <div class="grafico" id="grafico1">[ Gráfico Real com indicadores ]</div>
-        <div class="grafico" id="grafico2">[ Espelho TX1 com leitura ]</div>
+    <div class="conteudo-graficos">
+        <div class="grafico" id="grafico-real">[ Gráfico Real com indicadores ]</div>
+        <div class="grafico" id="espelho-tx1">[ Espelho TX1 com leitura ]</div>
     </div>
-    <div class="comando-box">
+    <div class="comando">
         <strong>SINAL ATUAL: CALL</strong><br>
         Critérios: RSI abaixo de 30, Engolfo de alta, MACD cruzado para cima<br>
         Confiabilidade: 93%
     </div>
     <script>
         setInterval(() => {
-            const now = new Date();
-            document.getElementById('clock').textContent =
-                now.toLocaleTimeString('pt-BR', { hour12: false });
+            const agora = new Date();
+            document.getElementById("hora-atual").innerText = agora.toLocaleTimeString("pt-BR");
         }, 1000);
     </script>
 </body>
