@@ -7,40 +7,34 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <div class="painel-topo">
+    <div class="top-bar">
         <span>Usuário: admin@tx1.com</span>
         <span>Banca: R$1000</span>
         <span>Meta: R$100</span>
         <span>Stop: R$50</span>
-        <span class="hora" id="hora-atual"></span>
+        <span class="relogio" id="clock"></span>
     </div>
-
-    <div class="painel-container">
-        <div class="painel-menu">
-            <a href="#">Gráfico</a>
-            <a href="#">Refúgio TX1</a>
-            <a href="#">Histórico</a>
-            <a href="#">Estatísticas</a>
-        </div>
-
-        <div class="painel-conteudo">
-            <div class="painel-graficos">
-                <div class="grafico" id="grafico-real">[ Gráfico Real com indicadores ]</div>
-                <div class="grafico" id="espelho-tx1">[ Espelho TX1 com leitura ]</div>
-            </div>
-            <div class="painel-comando">
-                <p><strong>Comando Atual:</strong> CALL</p>
-                <p><strong>Critérios:</strong> RSI abaixo de 30, Engolfo de alta, MACD cruzado para cima</p>
-                <p><strong>Confiabilidade:</strong> 93%</p>
-            </div>
-        </div>
+    <div class="mensagem-topo">"Confiança é sua maior entrada. TX1 está com você."</div>
+    <div class="menu-lateral">
+        <p>Gráfico</p>
+        <p>Refúgio TX1</p>
+        <p>Histórico</p>
+        <p>Estatísticas</p>
     </div>
-
+    <div class="graficos">
+        <div class="grafico" id="grafico1">[ Gráfico Real com indicadores ]</div>
+        <div class="grafico" id="grafico2">[ Espelho TX1 com leitura ]</div>
+    </div>
+    <div class="comando-box">
+        <strong>SINAL ATUAL: CALL</strong><br>
+        Critérios: RSI abaixo de 30, Engolfo de alta, MACD cruzado para cima<br>
+        Confiabilidade: 93%
+    </div>
     <script>
         setInterval(() => {
-            const agora = new Date();
-            const hora = agora.toLocaleTimeString('pt-BR');
-            document.getElementById('hora-atual').textContent = hora;
+            const now = new Date();
+            document.getElementById('clock').textContent =
+                now.toLocaleTimeString('pt-BR', { hour12: false });
         }, 1000);
     </script>
 </body>

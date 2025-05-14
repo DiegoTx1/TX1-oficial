@@ -3,34 +3,17 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>TX1 - Painel</title>
-    <link rel="stylesheet" href="style.css">
+    <title>TX1 - Acesso</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <div class="top-bar">
-        <span>Usuário: admin@tx1.com</span>
-        <span>Banca: R$1000</span>
-        <span>Meta: R$100</span>
-        <span>Stop: R$50</span>
-        <span class="relogio">16:58:24</span>
-    </div>
-    <div class="menu-lateral">
-        <ul>
-            <li>Gráfico</li>
-            <li>Refúgio TX1</li>
-            <li>Histórico</li>
-            <li>Estatísticas</li>
-        </ul>
-    </div>
-    <div class="mensagem">"Confiança é sua maior entrada. TX1 está com você."</div>
-    <div class="painel">
-        <div class="grafico" id="grafico-real">[ Gráfico Real com indicadores ]</div>
-        <div class="grafico" id="espelho-tx1">[ Espelho TX1 com leitura ]</div>
-    </div>
-    <div class="comando-box direita">
-        <p><strong>SINAL ATUAL: CALL</strong></p>
-        <p>Critérios: RSI abaixo de 30, Engolfo de alta, MACD cruzado para cima</p>
-        <p>Confiabilidade: 93%</p>
+    <div class="login-container">
+        <h1>TX1 - Acesso</h1>
+        <form action="painel.html">
+            <input type="text" placeholder="Email" required>
+            <input type="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
     </div>
 </body>
 </html>
