@@ -3,42 +3,43 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Painel TX1</title>
-    <link rel="stylesheet" href="painel.css">
-    <script>
-        function atualizarHora() {
-            const agora = new Date();
-            document.getElementById("hora").innerText = agora.toLocaleTimeString();
-        }
-        setInterval(atualizarHora, 1000);
-    </script>
+    <title>TX1 - Painel</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <div class="top-bar">
+    <div class="cabecalho">
         <span>Usuário: admin@tx1.com</span>
         <span>Banca: R$1000</span>
         <span>Meta: R$100</span>
         <span>Stop: R$50</span>
-        <span id="hora"></span>
+        <span id="relogio"></span>
     </div>
-    <div class="side-menu">
-        <ul>
-            <li>Gráfico</li>
-            <li>Refúgio TX1</li>
-            <li>Histórico</li>
-            <li>Estatísticas</li>
-        </ul>
+    <div class="menu-lateral">
+        <a href="#">Gráfico</a>
+        <a href="#">Refúgio TX1</a>
+        <a href="#">Histórico</a>
+        <a href="#">Estatísticas</a>
     </div>
-    <div class="command-box">
-        <h3>Comando Atual: CALL</h3>
-        <p>Critérios: RSI abaixo de 30, Engolfo de alta, MACD cruzado para cima</p>
+    <div class="mensagem-central">"Confiança é sua maior entrada. TX1 está com você."</div>
+    <div class="conteudo">
+        <div class="grafico" id="grafico1">[ Gráfico Real com indicadores ]</div>
+        <div class="grafico" id="grafico2">[ Espelho TX1 com leitura ]</div>
+        <div class="comando-vertical">
+            <h3>Comando Atual: CALL</h3>
+            <p>Confiabilidade: 93%</p>
+            <p>Critérios: RSI abaixo de 30, Engolfo de alta, MACD cruzado para cima</p>
+        </div>
     </div>
-    <div class="main-content">
-        <div class="grafico">[ Gráfico Real com indicadores ]</div>
-        <div class="grafico">[ Espelho TX1 com leitura ]</div>
-    </div>
-    <div class="mensagem-guardiao">
-        “Confiança é sua maior entrada. TX1 está com você.”
-    </div>
+    <script>
+        function atualizarRelogio() {
+            const agora = new Date();
+            const horas = agora.getHours().toString().padStart(2, '0');
+            const minutos = agora.getMinutes().toString().padStart(2, '0');
+            const segundos = agora.getSeconds().toString().padStart(2, '0');
+            document.getElementById('relogio').textContent = `${horas}:${minutos}:${segundos}`;
+        }
+        setInterval(atualizarRelogio, 1000);
+        atualizarRelogio();
+    </script>
 </body>
 </html>

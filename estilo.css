@@ -1,63 +1,55 @@
 
 body {
-    margin: 0;
+    background-color: #0e0e0e;
+    color: cyan;
     font-family: Arial, sans-serif;
-    background-color: #000;
-    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
-
-.fundo {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-color: #000;
+.cabecalho {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.avatar-fundo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.15;
-    max-width: 85%;
-    height: auto;
-    z-index: 1;
-}
-
-.painel-login {
-    position: relative;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.75);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-    text-align: center;
-    width: 300px;
-}
-
-.painel-login h2 {
-    color: #00ffff;
-    margin-bottom: 20px;
-}
-
-.painel-login input {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
+    justify-content: space-around;
+    background-color: #000;
     padding: 10px;
-    border: none;
-    border-radius: 6px;
+    font-size: 14px;
 }
-
-.painel-login button {
-    padding: 10px 20px;
-    background-color: #00ffff;
-    color: #000;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
+.menu-lateral {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.menu-lateral a {
+    color: cyan;
+    text-decoration: none;
+}
+.mensagem-central {
+    text-align: center;
+    margin: 20px;
+}
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+    position: relative;
+}
+.grafico {
+    width: 45%;
+    height: 300px;
+    border: 1px solid cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comando-vertical {
+    position: absolute;
+    left: -250px;
+    top: 300px;
+    width: 220px;
+    background-color: rgba(0, 255, 255, 0.1);
+    padding: 10px;
+    border-left: 2px solid cyan;
+    font-size: 13px;
 }
