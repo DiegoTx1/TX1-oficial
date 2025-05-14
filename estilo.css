@@ -1,55 +1,52 @@
 
 body {
-    background-color: #0e0e0e;
+    margin: 0;
+    background-color: #0d0d0d;
     color: cyan;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
-.cabecalho {
+.topo {
     display: flex;
     justify-content: space-around;
-    background-color: #000;
+    background-color: #111;
     padding: 10px;
     font-size: 14px;
 }
-.menu-lateral {
+.menu {
     position: absolute;
-    top: 60px;
-    left: 10px;
+    left: 20px;
+    top: 80px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
-.menu-lateral a {
+.menu a {
     color: cyan;
     text-decoration: none;
+    margin: 5px 0;
 }
-.mensagem-central {
+.mensagem {
     text-align: center;
-    margin: 20px;
+    margin: 20px 0;
 }
 .conteudo {
     display: flex;
-    justify-content: space-between;
-    margin: 50px;
-    position: relative;
+    justify-content: space-evenly;
+    margin-top: 50px;
 }
 .grafico {
-    width: 45%;
+    width: 40%;
     height: 300px;
     border: 1px solid cyan;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
-.comando-vertical {
+.comando {
     position: absolute;
-    left: -250px;
-    top: 300px;
-    width: 220px;
-    background-color: rgba(0, 255, 255, 0.1);
+    left: 20px;
+    bottom: 20px;
+    width: 250px;
     padding: 10px;
-    border-left: 2px solid cyan;
-    font-size: 13px;
+    border: 1px solid cyan;
+    font-size: 12px;
 }

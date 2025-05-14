@@ -7,39 +7,33 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <div class="cabecalho">
+    <div class="topo">
         <span>Usuário: admin@tx1.com</span>
         <span>Banca: R$1000</span>
         <span>Meta: R$100</span>
         <span>Stop: R$50</span>
         <span id="relogio"></span>
     </div>
-    <div class="menu-lateral">
+    <div class="menu">
         <a href="#">Gráfico</a>
         <a href="#">Refúgio TX1</a>
         <a href="#">Histórico</a>
         <a href="#">Estatísticas</a>
     </div>
-    <div class="mensagem-central">"Confiança é sua maior entrada. TX1 está com você."</div>
+    <div class="mensagem">"Confiança é sua maior entrada. TX1 está com você."</div>
     <div class="conteudo">
-        <div class="grafico" id="grafico1">[ Gráfico Real com indicadores ]</div>
-        <div class="grafico" id="grafico2">[ Espelho TX1 com leitura ]</div>
-        <div class="comando-vertical">
-            <h3>Comando Atual: CALL</h3>
-            <p>Confiabilidade: 93%</p>
-            <p>Critérios: RSI abaixo de 30, Engolfo de alta, MACD cruzado para cima</p>
-        </div>
+        <div class="grafico" id="grafico-real">[ Gráfico Real com indicadores ]</div>
+        <div class="grafico" id="espelho-tx1">[ Espelho TX1 com leitura ]</div>
+    </div>
+    <div class="comando">
+        <strong>Comando Atual: CALL</strong><br>
+        Critérios: RSI abaixo de 30, Engolfo de alta, MACD cruzado para cima
     </div>
     <script>
-        function atualizarRelogio() {
+        setInterval(() => {
             const agora = new Date();
-            const horas = agora.getHours().toString().padStart(2, '0');
-            const minutos = agora.getMinutes().toString().padStart(2, '0');
-            const segundos = agora.getSeconds().toString().padStart(2, '0');
-            document.getElementById('relogio').textContent = `${horas}:${minutos}:${segundos}`;
-        }
-        setInterval(atualizarRelogio, 1000);
-        atualizarRelogio();
+            document.getElementById("relogio").textContent = agora.toLocaleTimeString();
+        }, 1000);
     </script>
 </body>
 </html>
