@@ -1,38 +1,46 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>TX1 - Painel</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <div class="topo">
+    <div class="painel-topo">
         <span>Usuário: admin@tx1.com</span>
         <span>Banca: R$1000</span>
         <span>Meta: R$100</span>
         <span>Stop: R$50</span>
-        <span id="relogio"></span>
+        <span class="hora" id="hora-atual"></span>
     </div>
-    <div class="menu">
-        <a href="#">Gráfico</a>
-        <a href="#">Refúgio TX1</a>
-        <a href="#">Histórico</a>
-        <a href="#">Estatísticas</a>
+
+    <div class="painel-container">
+        <div class="painel-menu">
+            <a href="#">Gráfico</a>
+            <a href="#">Refúgio TX1</a>
+            <a href="#">Histórico</a>
+            <a href="#">Estatísticas</a>
+        </div>
+
+        <div class="painel-conteudo">
+            <div class="painel-graficos">
+                <div class="grafico" id="grafico-real">[ Gráfico Real com indicadores ]</div>
+                <div class="grafico" id="espelho-tx1">[ Espelho TX1 com leitura ]</div>
+            </div>
+            <div class="painel-comando">
+                <p><strong>Comando Atual:</strong> CALL</p>
+                <p><strong>Critérios:</strong> RSI abaixo de 30, Engolfo de alta, MACD cruzado para cima</p>
+                <p><strong>Confiabilidade:</strong> 93%</p>
+            </div>
+        </div>
     </div>
-    <div class="mensagem">"Confiança é sua maior entrada. TX1 está com você."</div>
-    <div class="conteudo">
-        <div class="grafico" id="grafico-real">[ Gráfico Real com indicadores ]</div>
-        <div class="grafico" id="espelho-tx1">[ Espelho TX1 com leitura ]</div>
-    </div>
-    <div class="comando">
-        <strong>Comando Atual: CALL</strong><br>
-        Critérios: RSI abaixo de 30, Engolfo de alta, MACD cruzado para cima
-    </div>
+
     <script>
         setInterval(() => {
             const agora = new Date();
-            document.getElementById("relogio").textContent = agora.toLocaleTimeString();
+            const hora = agora.toLocaleTimeString('pt-BR');
+            document.getElementById('hora-atual').textContent = hora;
         }, 1000);
     </script>
 </body>

@@ -1,52 +1,67 @@
 
 body {
     margin: 0;
-    background-color: #0d0d0d;
-    color: cyan;
     font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #00ffff;
 }
-.topo {
+
+.painel-topo {
     display: flex;
     justify-content: space-around;
     background-color: #111;
     padding: 10px;
     font-size: 14px;
 }
-.menu {
-    position: absolute;
-    left: 20px;
-    top: 80px;
+
+.painel-container {
+    display: flex;
+    height: calc(100vh - 40px);
+}
+
+.painel-menu {
+    background-color: #111;
+    padding: 15px;
+    width: 150px;
     display: flex;
     flex-direction: column;
 }
-.menu a {
-    color: cyan;
+
+.painel-menu a {
+    color: #00ffff;
     text-decoration: none;
-    margin: 5px 0;
+    margin-bottom: 15px;
 }
-.mensagem {
-    text-align: center;
-    margin: 20px 0;
-}
-.conteudo {
+
+.painel-conteudo {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 50px;
-}
-.grafico {
-    width: 40%;
-    height: 300px;
-    border: 1px solid cyan;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.comando {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    width: 250px;
+    width: 100%;
     padding: 10px;
-    border: 1px solid cyan;
-    font-size: 12px;
+    gap: 10px;
+}
+
+.painel-graficos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.grafico {
+    border: 1px solid #00ffff;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    background-color: #0f0f0f;
+    color: #00ffff;
+}
+
+.painel-comando {
+    width: 240px;
+    border: 1px solid #00ffff;
+    padding: 10px;
+    background-color: #111;
+    font-size: 14px;
+    color: #00ffff;
 }
