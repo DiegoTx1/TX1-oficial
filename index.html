@@ -5,27 +5,15 @@
     <meta charset="UTF-8">
     <title>TX1 - Acesso</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        function validarSenha() {
-            const senha = document.getElementById("senha").value;
-            if (senha === "110394") {
-                alert("Acesso autorizado! Bem-vindo ao TX1.");
-                // Redirecionar para painel futuramente: window.location.href = 'painel.html';
-            } else {
-                alert("Senha incorreta.");
-            }
-        }
-    </script>
 </head>
 <body>
-    <div class="overlay">
-        <img src="avatar.png" alt="Avatar TX1" class="avatar">
-        <div class="login-box">
-            <h2>TX1 - Acesso</h2>
-            <input type="email" placeholder="Email">
-            <input type="password" id="senha" placeholder="Senha">
-            <button onclick="validarSenha()">Entrar</button>
-        </div>
+    <div class="login-container">
+        <h1>TX1 - Acesso</h1>
+        <form>
+            <input type="text" placeholder="Email" required><br>
+            <input type="password" placeholder="Senha" required><br>
+            <button type="submit">Entrar</button>
+        </form>
     </div>
 </body>
 </html>
