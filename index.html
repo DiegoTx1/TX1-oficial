@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <script>
         function login() {
-            var email = document.getElementById("email").value;
-            var senha = document.getElementById("senha").value;
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
             if(email === "admin@tx1.com" && senha === "110394") {
                 window.location.href = "painel.html";
             } else {
@@ -19,10 +19,10 @@
 </head>
 <body>
     <div class="overlay">
-        <img src="avatar.png" alt="Avatar TX1" class="avatar">
+        <img src="avatar.png" class="avatar" alt="TX1 Avatar">
         <div class="login-box">
             <h2>TX1 - Acesso</h2>
-            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="email" placeholder="Email" required>
             <input type="password" id="senha" placeholder="Senha" required>
             <button onclick="login()">Entrar</button>
         </div>
