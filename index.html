@@ -1,21 +1,45 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>TX1 - Acesso</title>
-    <link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8">
+  <title>TX1 - Projeto Real</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="fundo-login">
-        <div class="login-box">
-            <h2>TX1 - Acesso</h2>
-            <form action="painel.html">
-                <input type="text" placeholder="Email" required><br>
-                <input type="password" placeholder="Senha" required><br>
-                <button type="submit">Entrar</button>
-            </form>
-        </div>
-    </div>
+
+<h1>TX1 - Sistema Base Real</h1>
+
+<div class="painel">
+  <strong>Relógio:</strong> <span id="relogio">00:00:00</span>
+</div>
+
+<div class="painel">
+  <strong>Banca:</strong> R$ <span id="banca">100.00</span> |
+  <strong>Meta:</strong> R$ <span id="meta">40.00</span> |
+  <strong>Stop:</strong> R$ <span id="stop">30.00</span>
+</div>
+
+<div class="painel">
+  <strong>Sinal Atual:</strong> <span id="sinal">CALL</span><br>
+  <strong>Critérios Técnicos:</strong> RSI, Engolfo, MACD<br>
+  <strong>Score:</strong> <span id="score">93%</span>
+</div>
+
+<div class="painel">
+  <button onclick="registrarEntrada('CALL')">CALL</button>
+  <button onclick="registrarEntrada('PUT')">PUT</button>
+  <button onclick="registrarEntrada('ESPERAR')">ESPERAR</button>
+</div>
+
+<div class="painel" id="resultado">
+  Resultado da entrada será mostrado aqui.
+</div>
+
+<div class="painel" id="historico">
+  <strong>Histórico:</strong><br>
+</div>
+
+<script src="js/tx1.js"></script>
 </body>
 </html>

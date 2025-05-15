@@ -1,0 +1,22 @@
+
+body {
+  background-color: #111;
+  color: #00ffff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+.painel {
+  border: 1px solid #00ffff;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+button {
+  padding: 10px 20px;
+  background: #00ffff;
+  color: #111;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
