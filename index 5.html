@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>TX1 Oficial</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #00ffff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .painel {
+      border: 1px solid #00ffff;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 8px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #00ffff;
+      color: #111;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>TX1 - Sistema Oficial com Funções Ativas</h1>
+
+<div class="painel">
+  <strong>Mensagem do Guardião:</strong> Confiança é sua maior entrada. TX1 está com você.
+</div>
+
+<div class="painel">
+  <strong>Relógio:</strong> <span id="relogio">00:00:00</span>
+</div>
+
+<div class="painel">
+  <strong>Banca:</strong> R$ <span id="banca">100.00</span> |
+  <strong>Meta:</strong> R$ <span id="meta">40.00</span> |
+  <strong>Stop:</strong> R$ <span id="stop">30.00</span>
+</div>
+
+<div class="painel">
+  <strong>Sinal Atual:</strong> <span id="sinal">CALL</span><br>
+  <strong>Critérios Técnicos:</strong> RSI, Engolfo, MACD<br>
+  <strong>Score:</strong> <span id="score">93%</span>
+</div>
+
+<div class="painel">
+  <button onclick="registrarEntrada('CALL')">CALL</button>
+  <button onclick="registrarEntrada('PUT')">PUT</button>
+  <button onclick="registrarEntrada('ESPERAR')">ESPERAR</button>
+</div>
+
+<div class="painel" id="resultado">
+  Resultado da entrada será mostrado aqui.
+</div>
+
+<div class="painel" id="historico">
+  <strong>Histórico:</strong><br>
+</div>
+
+<div class="painel">
+  <strong>Refúgio TX1:</strong><br>
+  “Não temas, porque eu sou contigo.” - Isaías 41:10
+</div>
+
+<script>
+function atualizarRelogio() {
+  const agora = new Date();
+  const horas = String(agora.getHours()).padStart(2, '0');
+  const minutos = String(agora.getMinutes()).padStart(2, '0');
+  const segundos = String(agora.getSeconds()).padStart(2, '0');
+  document.getElementById('relogio').textContent = horas + ':' + minutos + ':' + segundos;
+}
+setInterval(atualizarRelogio, 1000);
+window.onload = atualizarRelogio;
+
+let banca = 100.00;
+
+function registrarEntrada(tipo) {
+  const hora = new Date().toLocaleTimeString();
+  const resultado = Math.random() > 0.5 ? 'WIN' : 'LOSS';
+  const lucro = resultado === 'WIN' ? 8.30 : -10.00;
+  banca += lucro;
+  document.getElementById('banca').textContent = banca.toFixed(2);
+  document.getElementById('resultado').innerHTML = `Entrada: <strong>${tipo}</strong><br>Resultado: <strong>${resultado}</strong><br>Lucro: R$ ${lucro.toFixed(2)}`;
+  const hist = document.getElementById('historico');
+  hist.innerHTML += `> ${hora} - ${tipo} - ${resultado} - R$ ${lucro.toFixed(2)}<br>`;
+}
+</script>
+
+</body>
+</html>
