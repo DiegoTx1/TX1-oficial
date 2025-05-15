@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>TX1 - Plataforma Funcional</title>
+  <style>
+    body { background-color: #111; color: #00ffff; font-family: Arial, sans-serif; padding: 20px; }
+    .painel { margin-top: 20px; padding: 10px; border: 1px solid #00ffff; border-radius: 8px; }
+    .botao { padding: 10px 20px; background: #00ffff; color: #111; border: none; border-radius: 5px; cursor: pointer; margin: 5px; }
+  </style>
+</head>
+<body>
+
+<h1>TX1 - Sistema de Operações</h1>
+
+<div>
+  <strong>Mensagem do Guardião:</strong> Confiança é sua maior entrada. TX1 está com você.
+</div>
+
+<div style="margin-top:10px;">
+  <strong>Relógio:</strong> <span id="relogio">00:00:00</span>
+</div>
+
+<div class="painel">
+  <strong>Gráfico Real:</strong> (simulação)<br><br>
+  <strong>Espelho TX1:</strong> (simulação)
+</div>
+
+<div class="painel">
+  <strong>Banca:</strong> R$ 100,00 |
+  <strong>Meta:</strong> R$ 40,00 |
+  <strong>Stop:</strong> R$ 30,00
+</div>
+
+<div class="painel">
+  <strong>Sinal Atual:</strong> CALL<br>
+  <strong>Critérios Técnicos:</strong> RSI, Engolfo, MACD<br>
+  <strong>Score de Confiança:</strong> <span id="score">93%</span>
+</div>
+
+<div class="painel">
+  <button class="botao" onclick="registrarEntrada('CALL')">CALL</button>
+  <button class="botao" onclick="registrarEntrada('PUT')">PUT</button>
+  <button class="botao" onclick="registrarEntrada('ESPERAR')">ESPERAR</button>
+</div>
+
+<div class="painel" id="resultado">
+  Resultado da entrada aparecerá aqui.
+</div>
+
+<div class="painel">
+  <strong>Refúgio TX1:</strong><br>
+  “Não temas, porque eu sou contigo.” - Isaías 41:10<br>
+  [Botão de som funcional em futura versão]
+</div>
+
+<div class="painel" id="historico">
+  <strong>Histórico de Entradas:</strong><br>
+</div>
+
+<script>
+function atualizarRelogio() {
+  const agora = new Date();
+  const horas = String(agora.getHours()).padStart(2, '0');
+  const minutos = String(agora.getMinutes()).padStart(2, '0');
+  const segundos = String(agora.getSeconds()).padStart(2, '0');
+  document.getElementById('relogio').textContent = horas + ":" + minutos + ":" + segundos;
+}
+setInterval(atualizarRelogio, 1000);
+window.onload = atualizarRelogio;
+
+function registrarEntrada(tipo) {
+  const hora = new Date().toLocaleTimeString();
+  const resultado = Math.random() > 0.5 ? 'WIN' : 'LOSS';
+  document.getElementById('resultado').innerHTML = `Entrada: <strong>${tipo}</strong><br>Resultado: <strong>${resultado}</strong>`;
+  const hist = document.getElementById('historico');
+  hist.innerHTML += `> ${hora} - ${tipo} - ${resultado}<br>`;
+}
+</script>
+
+</body>
+</html>
