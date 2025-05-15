@@ -1,0 +1,1 @@
+// Conteúdo de exemplo para score_diario_funcao.py

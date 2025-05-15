@@ -1,0 +1,1 @@
+// Conteúdo de exemplo para grafico_espelhado_config.js
