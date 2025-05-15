@@ -1,38 +1,23 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>TX1 - Painel</title>
-    <link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8">
+  <title>Painel TX1</title>
+  <link rel="stylesheet" href="painel.css">
 </head>
 <body>
-    <div class="topo">
-        <span>Usuário: admin@tx1.com</span>
-        <span>Banca: R$1000</span>
-        <span>Meta: R$100</span>
-        <span>Stop: R$50</span>
-        <span class="relogio">17:59:59</span>
-    </div>
-    <div class="menu-lateral">
-        <ul>
-            <li>Gráfico</li>
-            <li>Refúgio TX1</li>
-            <li>Histórico</li>
-            <li>Estatísticas</li>
-        </ul>
-    </div>
-    <div class="mensagem-topo">
-        <em>"Confiança é sua maior entrada. TX1 está com você."</em>
-    </div>
-    <div class="painel-graficos">
-        <div class="grafico" id="grafico1">[ Gráfico Real com indicadores ]</div>
-        <div class="grafico" id="grafico2">[ Espelho TX1 com leitura ]</div>
-    </div>
-    <div class="painel-comando">
-        <strong>SINAL ATUAL: CALL</strong><br>
-        Critérios: RSI abaixo de 30, Engolfo de alta, MACD cruzado para cima<br>
-        Confiabilidade: 93%
-    </div>
+  <h1>TX1 Painel Principal</h1>
+  <div class="painel">
+    <p><strong>Mensagem do Guardião:</strong> TX1 está com você. Confiança é sua maior entrada.</p>
+    <p>Relógio: <span id="relogio">00:00:00</span></p>
+    <p>Banca: R$ <span id="banca">100.00</span> | Meta: R$ 40.00 | Stop: R$ 30.00</p>
+    <p>Sinal: CALL | Score: 93%</p>
+    <button onclick="registrarEntrada('CALL')">CALL</button>
+    <button onclick="registrarEntrada('PUT')">PUT</button>
+    <button onclick="registrarEntrada('ESPERAR')">ESPERAR</button>
+    <div id="resultado"></div>
+  </div>
+  <script src="painel_administrativo.js"></script>
 </body>
 </html>

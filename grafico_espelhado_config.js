@@ -1,1 +1,1 @@
-// Configuração do gráfico espelhado
+// Lógica do gráfico espelhado será inserida aqui

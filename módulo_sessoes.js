@@ -1,0 +1,1 @@
+// Módulo de controle por sessão de mercado
